@@ -1,0 +1,45 @@
+import java.util.Scanner;
+
+public class ContaPagar {
+
+	public static void main(String[] args) {
+		
+		
+		/**
+		 * Com base na tabela abaixo, escreva um programa que leia o código de um item e a quantidade deste item. A 
+		   seguir, calcule e mostre o valor da conta a pagar. 
+		 */
+		
+		Scanner sc = new Scanner(System.in);
+		
+		double valorConta = 0 ;
+		
+		System.out.println("Digite um codigo:");
+		int codigo = sc.nextInt();
+		if (codigo <= 5){
+			System.out.println("Digite a quantidade:");
+			int qtde = sc.nextInt();
+			if(codigo == 1) {
+				valorConta = qtde * 4.00;
+			}
+			if(codigo == 2) {
+				valorConta = qtde * 4.50;
+			}
+			if(codigo == 3) {
+				valorConta = qtde * 5.00;
+			}
+			if(codigo == 4) {
+				valorConta = qtde * 2.00;
+			}
+			if(codigo == 5) {
+				valorConta = qtde * 1.50;
+			}
+			System.out.printf("CONTA A PAGAR R$ %.2f  " , valorConta);
+		}else {	
+			System.out.println("CODIGO INVÁLIDO");
+		}	
+		sc.close();
+
+	}
+
+}

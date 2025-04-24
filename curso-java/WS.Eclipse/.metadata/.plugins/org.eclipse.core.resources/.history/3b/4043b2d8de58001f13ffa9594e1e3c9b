@@ -1,0 +1,37 @@
+package exerciciosVector;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class PessoasVect {
+
+	public static void main(String[] args) {
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+
+		System.out.println("QUANTOS PESSOAS SERAM DIGITADAS?");
+		int number = sc.nextInt();
+
+		sc.nextLine();
+
+		double[] vect = new double[number];
+		String [] nome = new String[number];
+		int [] idade = new int [number];
+		double[] altura = new double [number];
+
+		for (int i = 0; i < vect.length; i++) {
+			System.out.println("DADO DA 1° PESSOA:");
+			System.out.println("NOME:");
+			nome[i] = sc.nextLine();
+			
+			System.out.println("IDADE:");
+			idade[i] = sc.nextInt();
+			sc.nextLine();
+			System.out.println("ALTURA:");
+			altura[i] = sc.nextDouble();
+
+		}
+
+	}
+
+}
